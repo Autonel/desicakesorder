@@ -25,20 +25,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    justify-content: flex-start;
+    gap: 0.25rem;
+    padding: 1.25rem 1.5rem;
     text-align: center;
   }
   h1 {
     font-family: "Fraunces", Georgia, serif;
     font-weight: 600;
-    font-size: clamp(2rem, 6vw, 3.25rem);
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
     line-height: 1.1;
     margin: 0;
     color: var(--accent);
   }
-  p { margin: 0.5rem 0 0; color: var(--muted); font-size: 1.05rem; }
+  p { margin: 0.35rem 0 0; color: var(--muted); font-size: 1rem; }
+  @media (max-height: 820px) { p { display: none; } }
   @media (prefers-color-scheme: dark) {
     :root { --bg: #2a0b17; --ink: #ffe9ef; --muted: #e2b5c3; --accent: #ff9fbd; }
   }
@@ -49,7 +50,9 @@
     <h1>Desi Cakes &amp; Shakes</h1>
     <p>Chat with us to ask about the menu and place your order.</p>
   </header>
-  <elevenlabs-convai agent-id="agent_8901m26kk5a3eejvkwteczgm0k2e"></elevenlabs-convai>
+
+  <!-- Replace YOUR_AGENT_ID with the Agent ID from your ElevenLabs dashboard -->
+  <elevenlabs-convai agent-id="agent_8901m26kk5a3eejvkwteczgm0k2e" variant="expanded"></elevenlabs-convai>
   <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
